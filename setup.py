@@ -6,11 +6,9 @@ with open('DESCRIPTION.txt') as file:
 
 # some more details
 CLASSIFIERS = [
-    'Development Status :: 1 - Beta',
     'Intended Audience :: Developers',
     'Topic :: Internet',
     'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
