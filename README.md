@@ -1,4 +1,4 @@
-mygmap
+ncalt
 ======
 
 Simple ncat alternative script.
