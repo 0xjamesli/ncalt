@@ -7,7 +7,7 @@ with open('DESCRIPTION.txt') as file:
 # some more details
 CLASSIFIERS = [
     'Intended Audience :: Developers',
-    'Topic :: Internet',
+    'Topic :: Remote',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.3',

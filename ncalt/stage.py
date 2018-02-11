@@ -1,4 +1,3 @@
-
 #!/usr/local/bin/env python
 
 '''
@@ -10,6 +9,7 @@ import socket
 import getopt
 import threading
 import subprocess
+import signal
 
 
 listen             = False
@@ -67,8 +67,6 @@ def main():
 
 '''
 Client propmt: read from stdin
-
-TODO: add a command to close the remote server e.g close_remote
 '''
 def client_sender():
 
@@ -102,6 +100,8 @@ Listen for incomming TCP connections
 '''
 def server_loop():
 
+ signal.signal(signal.SIGINT, shutdown)
+
  global target
  global port
 
@@ -111,6 +111,7 @@ def server_loop():
  # 3 pending connections max
  # note that it does not limit the number of existing established connections
  server.listen(3)
+ print("Server is listening on " + str(target) + ":" + str(port))
 
  try:
      while True:
@@ -163,6 +164,15 @@ def run_command(command):
   output = err.output
 
  return output
+
+'''
+TODO:
+
+Handle the exiting server. Clean all traces
+'''
+def shutdown(signum, frame):
+    print('Shutting down gracefully...')
+    sys.exit(0)
 
 
 if __name__ == "__main__":
