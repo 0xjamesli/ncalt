@@ -168,7 +168,7 @@ def run_command(command):
 '''
 TODO:
 
-Handle the exiting server. Clean all traces
+Handle the exiting server. Clean all traces.
 '''
 def shutdown(signum, frame):
     print('Shutting down gracefully...')
