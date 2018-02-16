@@ -7,14 +7,14 @@ with open('DESCRIPTION.txt') as file:
 # some more details
 CLASSIFIERS = [
     'Intended Audience :: Developers',
-    'Topic :: Remote',
+    'Topic :: Internet',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.5',
     ]
 
 # calling the setup function
 setup(name='ncalt',
-      version='1.0.0',
+      version='2.0.0',
       description='A small ncat alternative',
       long_description=long_description,
       author='Jackf',
